@@ -1,0 +1,35 @@
+{
+  "name": "ui-tests-demo",
+  "version": "1.0.0",
+  "description": "Star Wars merchandise store with UI tests",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitas109/ui-tests-demo.git"
+  },
+  "keywords": [
+    "star-wars",
+    "store",
+    "playwright",
+    "testing"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitas109/ui-tests-demo/issues"
+  },
+  "homepage": "https://github.com/vitas109/ui-tests-demo#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.2.3",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1"
+  }
+}
