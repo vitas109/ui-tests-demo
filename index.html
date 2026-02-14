@@ -1,66 +1,34 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html dir="ltr" lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galaxy Store - Магазин атрибутики Звёздных войн</title>
-  <script type="module" crossorigin src="./assets/index-BLa9dCMi.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Dp3wlKbt.css">
+    <meta charset="utf-8">
+    <title>Allure Report</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="plugin/screen-diff/styles.css">
 </head>
 <body>
-  <div id="app">
-    <header class="header">
-      <div class="header-content">
-        <a href="#/" class="logo">
-          <span class="logo-icon">⭐</span>
-          <span class="logo-text">Galaxy Store</span>
-        </a>
-        <nav class="nav">
-          <a href="#/" class="nav-link" data-page="home">Главная</a>
-          <a href="#/catalog" class="nav-link" data-page="catalog">Каталог</a>
-          <a href="#/reviews" class="nav-link" data-page="reviews">Отзывы</a>
-          <a href="#/profile" class="nav-link" data-page="profile">Кабинет</a>
-          <a href="#/cart" class="nav-link cart-link">
-            <span class="cart-icon">🛒</span>
-            <span class="cart-count" id="cart-count">0</span>
-          </a>
-          <button class="auth-btn" id="auth-btn">Вход</button>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main-content">
-      <!-- Контент будет загружаться динамически -->
-    </main>
-
-    <footer class="footer">
-      <p>© 2026 Galaxy Store. Пет-проект https://github.com/vitas109 </p>
-      <p>Магазин атрибутики по Звёздным войнам</p>
-    </footer>
-  </div>
-
-  <!-- Модальное окно авторизации -->
-  <div class="modal" id="auth-modal">
-    <div class="modal-content">
-      <span class="modal-close" id="close-auth">&times;</span>
-      <h2 id="auth-title">Вход</h2>
-      <form id="auth-form">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" required placeholder="qwe@qwe.ru">
-        </div>
-        <div class="form-group">
-          <label for="password">Пароль</label>
-          <input type="password" id="password" required placeholder="qweQWE">
-        </div>
-        <button type="submit" class="btn btn-primary" id="auth-submit">Войти</button>
-        <p class="auth-toggle">
-          <span id="auth-toggle-text">Нет аккаунта?</span>
-          <a href="#" id="auth-toggle-link">Регистрация</a>
-        </p>
-      </form>
+    <div id="alert"></div>
+    <div id="content">
+        <span class="spinner">
+            <span class="spinner__circle"></span>
+        </span>
     </div>
-  </div>
-
+    <div id="popup"></div>
+    <script src="app.js"></script>
+    <script src="plugin/behaviors/index.js"></script>
+    <script src="plugin/packages/index.js"></script>
+    <script src="plugin/screen-diff/index.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FVWC4GKEYS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FVWC4GKEYS', {
+          'allureVersion': '2.36.0',
+          'reportUuid': '1a9511f0-6467-46c6-8dbe-3b5327643ce2',
+          'single_file': false
+        });
+    </script>
 </body>
 </html>
