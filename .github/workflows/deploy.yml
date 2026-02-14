@@ -63,3 +63,35 @@ jobs:
 
       - name: Run Playwright tests
         run: npm run test
+
+      - name: Setup Allure
+        uses: beemda/allure-setup-action@v1
+        with:
+          allure_version: 2.13.2
+
+      - name: Generate Allure report
+        run: npm run test && allure generate allure-results -o allure-report --clean
+
+      - name: Deploy Allure report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./allure-report
+          commit_message: "Deploy Allure test report"
+        if: always()
+
+      - name: Upload Allure results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-results
+          path: allure-results
+          retention-days: 30
+
+      - name: Upload Allure report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: allure-report
+          path: allure-report
+          retention-days: 30
