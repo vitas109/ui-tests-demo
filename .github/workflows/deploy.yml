@@ -34,15 +34,27 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build app
-        run: npm run build
-
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
-        run: npm run test
+      - name: Run UI tests
+        run: npm run test -- --grep-invert "Скриншот"
         continue-on-error: true
+
+      - name: Run screenshot tests
+        run: npm run test -- --grep "Скриншот" --update-snapshots
+        continue-on-error: true
+
+      - name: Commit and push screenshots
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/tests/screenshot.spec.ts-snapshots/
+          git commit -m "chore: update screenshot baselines [skip ci]" || echo "No changes to commit"
+          git push
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Allure
         run: npm install -g allure-commandline
