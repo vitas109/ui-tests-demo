@@ -1,0 +1,82 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "⭐ Galaxy Store" [ref=e5] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e6]: ⭐
+        - generic [ref=e7]: Galaxy Store
+      - navigation [ref=e8]:
+        - link "Главная" [ref=e9] [cursor=pointer]:
+          - /url: "#/"
+        - link "Каталог" [ref=e10] [cursor=pointer]:
+          - /url: "#/catalog"
+        - link "Отзывы" [ref=e11] [cursor=pointer]:
+          - /url: "#/reviews"
+        - link "Кабинет" [ref=e12] [cursor=pointer]:
+          - /url: "#/profile"
+        - link "🛒 0" [ref=e13] [cursor=pointer]:
+          - /url: "#/cart"
+          - generic [ref=e14]: 🛒
+          - generic [ref=e15]: "0"
+        - button "Вход" [ref=e16] [cursor=pointer]
+  - main [ref=e17]:
+    - heading "Каталог товаров" [level=1] [ref=e18]
+    - generic [ref=e20]:
+      - generic [ref=e21]:
+        - generic [ref=e22]: Категория
+        - combobox "Категория" [ref=e23]:
+          - option "Все категории"
+          - option "Световые мечи" [selected]
+          - option "Одежда"
+          - option "Мерч"
+      - generic [ref=e24]:
+        - generic [ref=e25]: Цена от
+        - spinbutton "Цена от" [ref=e26]: "0"
+      - generic [ref=e27]:
+        - generic [ref=e28]: Цена до
+        - spinbutton "Цена до" [ref=e29]: "20000"
+      - generic [ref=e30]:
+        - generic [ref=e31]: Сортировка
+        - combobox "Сортировка" [ref=e32]:
+          - option "По популярности" [selected]
+          - option "По остатку"
+    - generic [ref=e33]:
+      - generic [ref=e34]:
+        - generic [ref=e35]: 🔴
+        - generic [ref=e36]:
+          - heading "Световой меч Дарт Вейдера" [level=3] [ref=e37]
+          - paragraph [ref=e38]: Световые мечи
+          - paragraph [ref=e39]: Мало (5 шт.)
+          - paragraph [ref=e40]: 15 000 ₽
+          - button "В корзину" [ref=e41] [cursor=pointer]
+      - generic [ref=e42]:
+        - generic [ref=e43]: 🟢
+        - generic [ref=e44]:
+          - heading "Световой меч Люка Скайвокера" [level=3] [ref=e45]
+          - paragraph [ref=e46]: Световые мечи
+          - paragraph [ref=e47]: Достаточно (12 шт.)
+          - paragraph [ref=e48]: 12 000 ₽
+          - button "В корзину" [ref=e49] [cursor=pointer]
+      - generic [ref=e50]:
+        - generic [ref=e51]: 🔴
+        - generic [ref=e52]:
+          - heading "Световой меч Кайло Рена" [level=3] [ref=e53]
+          - paragraph [ref=e54]: Световые мечи
+          - paragraph [ref=e55]: Достаточно (8 шт.)
+          - paragraph [ref=e56]: 16 000 ₽
+          - button "В корзину" [ref=e57] [cursor=pointer]
+      - generic [ref=e58]:
+        - generic [ref=e59]: 🔵
+        - generic [ref=e60]:
+          - heading "Световой меч Мейс Винду" [level=3] [ref=e61]
+          - paragraph [ref=e62]: Световые мечи
+          - paragraph [ref=e63]: Мало (3 шт.)
+          - paragraph [ref=e64]: 14 000 ₽
+          - button "В корзину" [ref=e65] [cursor=pointer]
+  - contentinfo [ref=e66]:
+    - paragraph [ref=e67]: © 2026 Galaxy Store. Пет-проект https://github.com/vitas109
+    - paragraph [ref=e68]: Магазин атрибутики по Звёздным войнам
+```

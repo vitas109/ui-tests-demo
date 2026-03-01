@@ -1,0 +1,32 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "⭐ Galaxy Store" [ref=e5] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e6]: ⭐
+        - generic [ref=e7]: Galaxy Store
+      - navigation [ref=e8]:
+        - link "Главная" [ref=e9] [cursor=pointer]:
+          - /url: "#/"
+        - link "Каталог" [ref=e10] [cursor=pointer]:
+          - /url: "#/catalog"
+        - link "Отзывы" [ref=e11] [cursor=pointer]:
+          - /url: "#/reviews"
+        - link "Кабинет" [ref=e12] [cursor=pointer]:
+          - /url: "#/profile"
+        - link "🛒 0" [ref=e13] [cursor=pointer]:
+          - /url: "#/cart"
+          - generic [ref=e14]: 🛒
+          - generic [ref=e15]: "0"
+        - button "Вход" [ref=e16] [cursor=pointer]
+  - main [ref=e17]:
+    - generic [ref=e19]:
+      - heading "Для доступа к личному кабинету необходимо войти" [level=2] [ref=e20]
+      - button "Войти" [ref=e21] [cursor=pointer]
+  - contentinfo [ref=e22]:
+    - paragraph [ref=e23]: © 2026 Galaxy Store. Пет-проект https://github.com/vitas109
+    - paragraph [ref=e24]: Магазин атрибутики по Звёздным войнам
+```
